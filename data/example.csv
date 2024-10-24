@@ -1,0 +1,6 @@
+"Directory Name","Purpose","Resources to Expect"
+"images","To store images used in the repo","images files such as .png, .tiff, .jpg"
+"data","Data used in the project","files such as CSV files, text files, etc."
+"requirements","Information necessary to run the project","files such as requirements.txt for Python"
+"src","Source code used in the project","may contain sub-directories"
+"testing","Code and data needed for testing","may contain automation or be text-based to direct human testing"
