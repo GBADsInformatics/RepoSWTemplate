@@ -10,11 +10,15 @@
 import sys
 import csv
 
+if len ( sys.argv ) < 3:
+    print ( "Usage: python3 csvFields.py <csv filename> <field number starting at 1>" )
+    sys.exit ( -1 )
+
 file_name = sys.argv[1]
 num = int(sys.argv[2]) - 1
 if num < 0:
     print ( "Improper column number (",num+1,")" )
-    exit ( -1 )
+    sys.exit ( -1 )
 
 colfield = []
 with open ( file_name, encoding='ISO-8859-1' ) as csvDataFile:
@@ -30,7 +34,7 @@ with open ( file_name, encoding='ISO-8859-1' ) as csvDataFile:
     uniqList = list(setA)
     uniqList.sort()
     total = len(uniqList)
-    print ( "There are ",total," unique values in column ",num )
+    print ( "There are ",total," unique values in column ",num+1 )
     i = 0
     while i < total:
         print ( uniqList[i] )
